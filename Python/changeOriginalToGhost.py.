@@ -1,0 +1,44 @@
+import os
+import time
+from pydub import AudioSegment
+
+# --- KONFIGURATION ---
+SOURCE_DIR = "original_mp3s"   
+TARGET_DIR = "geister_mp3s" 
+
+os.makedirs(SOURCE_DIR, exist_ok=True)
+os.makedirs(TARGET_DIR, exist_ok=True)
+
+def process_file(filename):
+    input_path = os.path.join(SOURCE_DIR, filename)
+    output_path = os.path.join(TARGET_DIR, filename)
+    
+    try:
+        # TRICK: Wir lassen pydub das Format selbst erraten (falls es eigentlich WAV ist)
+        sound = AudioSegment.from_file(input_path) 
+        
+        # Effekt: Tiefer & Echo
+        low = sound._spawn(sound.raw_data, overrides={
+            "frame_rate": int(sound.frame_rate * 0.75)
+        }).set_frame_rate(sound.frame_rate)
+        
+        ghostly = low.overlay(low - 10, position=150).overlay(low - 15, position=300)
+        
+        # Export als echte MP3
+        ghostly.export(output_path, format="mp3")
+        return True
+    except Exception as e:
+        print(f"\n   [!] FEHLER bei {filename}: {e}")
+        return False
+
+# Dateien einlesen
+files = [f for f in os.listdir(SOURCE_DIR) if f.lower().endswith((".mp3", ".wav"))]
+
+print(f"Gefunden: {len(files)} Dateien. Starte Grusel-Kur...")
+
+for i, filename in enumerate(files, 1):
+    print(f"\rVerarbeite: [{i}/{len(files)}] {filename[:30]}...", end="", flush=True)
+    process_file(filename)
+
+print("\n\nFertig! Prüfe jetzt den Ordner 'geister_mp3s'.")
+
