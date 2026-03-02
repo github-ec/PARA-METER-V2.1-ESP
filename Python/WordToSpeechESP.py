@@ -2,7 +2,7 @@ import pyttsx3, time, re
 
 # Stand 2026/03/02 - Anpassung für ESP32 Header (ohne PROGMEM)
 ##############################
-WordListFile = r"WordListsESP.h"
+WordListFile = r"WordLists.h"
 mp3Path      = r'C:\temp\mp3\\' # Backslash am Ende für Windows-Pfad
 ##############################
 
