@@ -13,5 +13,6 @@ Convention: CCNNxxxxx.mp3 with
 This allows to choose a category and a word from WordList.h and derive the appropriate 
 mp3 filename.
 
-The zip file mp3.zip contains sound files that have been created with WordToSpeechESP.py from V2.1 ESP while mp3files.py contains the files created with WordLists2Speech.py from Version 2.0.
+The zip file **mp3.zip** contains sound files that have been created with WordToSpeechESP.py from V2.1 ESP while **mp3files.py** contains the files created with WordLists2Speech.py from Version 2.0.
 
+The file "GhostMp3.zip" contains the same word library but using a male voice plus adding a "ghost" effect introduced by the Python script changeOriginalToGhost.py.
