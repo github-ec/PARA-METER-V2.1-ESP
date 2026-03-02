@@ -1,12 +1,20 @@
 #pragma once
 #include <Arduino.h>
 
+// Created 2026/03/02 19:23:41
+// ------------------------------------------
 // ID  | Category Name    | Words
 // ----|------------------|----------
-//  0  | PRONOMEN         | 33
-//  1  | ORTE             | 26
-//  2  | HAUS             | 50
-//  ... usw.
+//  0  | PRONOMEN         |     33
+//  1  | ORTE             |     26
+//  2  | HAUS             |     51
+//  3  | VERBEN           |     51
+//  4  | ADJEKTIVE        |     61
+//  5  | NAMEN            |     42
+//  6  | ZEIT             |     40
+//  7  | GEGENSTÄNDE      |     41
+//  8  | TODESURSACHEN    |     36
+// ------------------------------------------
 
 const char p0[] = "PRONOMEN/Ich/Du/Er/Sie/Es/Wir/Ihr/Sie/Mein/Dein/Sein/Ihr/Unser/Jemand/Niemand/Alle/Einer/Jeder/Wer/Was/Mann/Frau/Kind/Mädchen/Junge/Mutter/Vater/Bruder/Schwester/Fremder/Gast/Feind";
 const char p1[] = "ORTE/Hier/Dort/Oben/Unten/Links/Rechts/Vorne/Hinten/Nah/Fern/Draußen/Drinnen/Dazwischen/Hinter/Unter/Neben/Gegenüber/Überall/Nirgendwo/Mitte/Ecke/Weg/Zurück/Tief/Hoch";
