@@ -8,4 +8,7 @@ Code adapted to be used with ESP32
 * Uses open pins 35 and 34 to read random data
 * Adopted for ADC1 
 
-<img width="1139" height="863" alt="image" src="https://github.com/user-attachments/assets/190aa87a-1238-422f-902b-11a86336da9f" />
+The unconnected yellow wire that goes from D34 to the center of the breadboard is uses as an "antenna" to gather random data.
+
+
+<img width="464" height="351" alt="image" src="https://github.com/user-attachments/assets/093f2382-33a7-4a1c-9fc6-e7abc5752bdb" />
