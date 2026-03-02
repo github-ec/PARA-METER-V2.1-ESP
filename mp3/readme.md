@@ -12,3 +12,6 @@ Convention: CCNNxxxxx.mp3 with
 
 This allows to choose a category and a word from WordList.h and derive the appropriate 
 mp3 filename.
+
+The zip file mp3.zip contains sound files that have been created with WordToSpeechESP.py.
+
